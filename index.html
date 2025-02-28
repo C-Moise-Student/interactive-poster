@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <link rel="stylesheet" href="styles.css">
+  </header>
+  <body id="page">
+    <h1>Technology Education Grade 8</h1>
+    <h2>Interactive Poster Project</h2>
+  </br>
+    <p>Touch any of the interactive points on the poster to hear
+      the audio play from this site!</p>
+
+    <script>
+      console.log("hi");
+      var audio = new Audio("wiisports.mp3");
+      document
+        .getElementById("page")
+        .addEventListener("keydown", function (event) {
+          if (audio.paused) {
+            if (event.key === "ArrowRight") {
+              console.log("Right arrow key pressed");
+              audio = new Audio("wiisports.mp3");
+              audio.play();
+            }
+            if (event.key === "ArrowLeft") {
+              console.log("Left arrow key pressed");
+              audio = new Audio("menu.mp3");
+              audio.play();
+            }
+          }
+        });
+    </script>
+  </body>
+</html>
