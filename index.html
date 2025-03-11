@@ -17,9 +17,9 @@
         .getElementById("page")
         .addEventListener("keydown", function (event) {
           if (audio.paused) {
-            if (event.key === "ArrowRight") {
+            if (event.key === "Space") {
               console.log("Right arrow key pressed");
-              audio = new Audio("recording1.wav");
+              audio = new Audio("1.mp3");
               audio.play();
             }
             if (event.key === "ArrowLeft") {
